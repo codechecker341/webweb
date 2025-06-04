@@ -1,143 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Asoreju - Fundación de Reciclaje</title>
-<style>
-  /* Reset y base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #6BCB77, #1B4332);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  header {
-    text-align: center;
-    margin-bottom: 30px;
-    max-width: 900px;
-  }
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
-  }
-  header p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-  }
-  .gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 900px;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  .gallery img {
-    width: 280px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  .gallery img:hover {
-    transform: scale(1.05);
-  }
-  .info-button {
-    background: #ffd166;
-    color: #1B4332;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 40px;
-    font-size: 1.25rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 12px rgba(255,209,102,0.5);
-  }
-  .info-button:hover {
-    background-color: #f4a261;
-    box-shadow: 0 8px 16px rgba(244,162,97,0.7);
-  }
-  .info-box {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    max-width: 600px;
-    padding: 20px 30px;
-    margin-top: 20px;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #f0f0f0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    user-select: text;
-    display: none; /* oculto al inicio */
-    text-align: center;
-  }
-  footer {
-    margin-top: auto;
-    color: #c1c1c1;
-    font-size: 0.9rem;
-  }
-
-  /* Responsivo */
-  @media (max-width: 640px) {
-    .gallery img {
-      width: 90vw;
-      height: 50vw;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fundación Asoreju - Reciclaje y cuidado del medio ambiente</title>
+  <meta name="description" content="La Fundación Asoreju promueve el reciclaje y prácticas responsables para preservar el medio ambiente y proteger el planeta." />
+  <style>
+    /* Reset y base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6BCB77, #1B4332);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      max-width: 900px;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     }
     header p {
-      font-size: 1rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
     }
-  }
-</style>
+    main {
+      max-width: 900px;
+      width: 100%;
+    }
+    .gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .gallery img {
+      width: 280px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    button.info-button {
+      background: #ffd166;
+      color: #1B4332;
+      border: none;
+      border-radius: 30px;
+      padding: 15px 40px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 12px rgba(255,209,102,0.5);
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+    button.info-button:hover {
+      background-color: #f4a261;
+      box-shadow: 0 8px 16px rgba(244,162,97,0.7);
+    }
+    section.info-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 20px 30px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #f0f0f0;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      user-select: text;
+      text-align: center;
+      display: none;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    footer {
+      margin-top: auto;
+      color: #c1c1c1;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 15px 0;
+      width: 100%;
+    }
+
+    /* Responsivo */
+    @media (max-width: 640px) {
+      .gallery img {
+        width: 90vw;
+        height: 50vw;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      button.info-button {
+        width: 90%;
+        padding: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Fundación Asoreju</h1>
-  <p>Comprometidos con el reciclaje y cuidado del planeta</p>
-</header>
-
-<section class="gallery" aria-label="Imágenes relacionadas con reciclaje">
-  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Bolsa de reciclaje en un parque" />
-  <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=600&q=80" alt="Manos sosteniendo materiales reciclables" />
-</section>
-
-<button class="info-button" id="toggleInfoBtn" aria-expanded="false" aria-controls="infoAsoreju">¿Quiénes somos?</button>
-
-<section role="region" id="infoAsoreju" class="info-box" aria-live="polite">
-  <p>
-    La Fundación <strong>Asoreju</strong> se dedica al reciclaje y la protección del medio ambiente. Nuestro objetivo es promover y facilitar prácticas responsables de reutilización y reciclaje para conservar nuestro planeta para las futuras generaciones.
-  </p>
-</section>
-
-<footer>
-  &copy; 2024 Fundación Asoreju. Todos los derechos reservados.
-</footer>
-
-<script>
-  const btn = document.getElementById('toggleInfoBtn');
-  const infoBox = document.getElementById('infoAsoreju');
-  btn.addEventListener('click', () => {
-    const isVisible = infoBox.style.display === 'block';
-    infoBox.style.display = isVisible ? 'none' : 'block';
-    btn.setAttribute('aria-expanded', !isVisible);
-  });
-</script>
+  <header>
+    <h1>Fundación Asoreju</h1>
+    <p>Comprometidos con el reciclaje y cuidado del planeta</p>
+  </header>
+  
+  <main>
+    <section class="gallery" aria-label="Imágenes relacionadas con reciclaje">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Bolsa de reciclaje en un parque" />
+      <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=600&q=80" alt="Manos sosteniendo materiales reciclables" />
+    </section>
+  
+    <button class="info-button" id="toggleInfoBtn" aria-expanded="false" aria-controls="infoAsoreju">¿Quiénes somos?</button>
+  
+    <section role="region" id="infoAsoreju" class="info-box" aria-live="polite">
+      <p>
+        La Fundación <strong>Asoreju</strong> se dedica al reciclaje y la protección del medio ambiente. Nuestro objetivo es promover y facilitar prácticas responsables de reutilización y reciclaje para conservar nuestro planeta para las futuras generaciones.
+      </p>
+    </section>
+  </main>
+  
+  <footer>
+    &copy; 2024 Fundación Asoreju. Todos los derechos reservados.
+  </footer>
+  
+  <script>
+    const btn = document.getElementById('toggleInfoBtn');
+    const infoBox = document.getElementById('infoAsoreju');
+    btn.addEventListener('click', () => {
+      const isVisible = infoBox.style.display === 'block';
+      infoBox.style.display = isVisible ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', !isVisible);
+    });
+  </script>
 </body>
 </html>
-
