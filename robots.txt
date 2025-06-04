@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://codechecker341.github.io/webweb/sitemap.xml
